@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Recruitment System - Additional Modules</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f9;
+    }
+
+    header {
+      background-color: #007bff;
+      color: #fff;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #0056b3;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #f4f4f9;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    .section {
+      margin-bottom: 30px;
+      padding: 20px;
+      background: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .form-group input, .form-group textarea, .form-group select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .form-group button {
+      width: 100%;
+      padding: 10px;
+      color: #fff;
+      background-color: #007bff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .form-group button:hover {
+      background-color: #0056b3;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+
+    table th, table td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: left;
+    }
+
+    table th {
+      background-color: #007bff;
+      color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+      }
+
+      nav a {
+        margin: 5px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>E-Recruitment System</h1>
+  </header>
+
+  <nav>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="job-posting.html">Post a Job</a>
+    <a href="job-listings.html">Job Listings</a>
+    <a href="applications.html">Applications</a>
+    <a href="reports.html">Generate Reports</a>
+  </nav>
+
+  <div class="container">
+    <!-- Admin Dashboard Section -->
+    <div class="section">
+      <h2>Admin Dashboard</h2>
+      <p>Welcome, Admin! Manage the system efficiently with the tools below.</p>
+      <ul>
+        <li><a href="manage-employers.html">Manage Employers</a></li>
+        <li><a href="generate-reports.html">Generate Reports</a></li>
+      </ul>
+    </div>
+
+    <!-- Job Posting Section -->
+    <div class="section">
+      <h2>Post a Job</h2>
+      <form action="post-job.php" method="POST">
+        <div class="form-group">
+          <label for="job-title">Job Title</label>
+          <input type="text" id="job-title" name="job-title" placeholder="Enter job title" required>
+        </div>
+        <div class="form-group">
+          <label for="job-description">Job Description</label>
+          <textarea id="job-description" name="job-description" rows="4" placeholder="Enter job description" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="qualifications">Qualifications</label>
+          <textarea id="qualifications" name="qualifications" rows="3" placeholder="Enter qualifications" required></textarea>
+        </div>
+        <div class="form-group">
+          <button type="submit">Post Job</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Job Listings Section -->
+    <div class="section">
+      <h2>Available Jobs</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Job ID</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Qualifications</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Software Engineer</td>
+            <td>Develop and maintain software solutions.</td>
+            <td>Bachelor's in Computer Science</td>
+            <td><a href="apply-job.html">Apply</a></td>
+          </tr>
+          <!-- Additional rows can be added dynamically -->
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Applications Overview Section -->
+    <div class="section">
+      <h2>Applications Overview</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Application ID</th>
+            <th>Applicant Name</th>
+            <th>Job Title</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1001</td>
+            <td>John Doe</td>
+            <td>Software Engineer</td>
+            <td>Pending</td>
+            <td><a href="view-application.html">View</a></td>
+          </tr>
+          <!-- Additional rows can be added dynamically -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
